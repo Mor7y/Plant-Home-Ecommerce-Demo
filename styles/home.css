@@ -1,0 +1,137 @@
+.home-container {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: left;
+  gap: 2rem;
+}
+
+.home-title-wraper {
+  width: 50%;
+  margin-right: 0;
+}
+
+.home-img-wraper {
+  position: relative;
+}
+
+.home-img {
+  margin-top: 2rem;
+  width: 300px;
+}
+
+.img-background {
+  position: absolute;
+  z-index: -10;
+  top: 10%;
+  left: 20%;
+  clip-path: polygon(10% 0, 100% 25%, 100% 100%, 10% 75%);
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgb(94, 181, 141) 30%,
+    rgb(40, 87, 65) 60%
+  );
+}
+
+.home-title {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.home-title span {
+  font-family: "Lobster", cursive;
+  color: var(--color-green);
+}
+
+.home-description {
+  margin-bottom: 2.5rem;
+}
+
+.home-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-green);
+  border-radius: 1rem;
+  color: white;
+}
+
+.home-btn:hover {
+  background-color: var(--color-green-darker);
+}
+
+.home-btn i {
+  transform: rotate(45deg);
+}
+
+.home-btn:hover i {
+  transform: translateY(2px) rotate(45deg);
+}
+
+.home-social {
+  position: absolute;
+  top: 35%;
+  right: -1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.follow-us {
+  position: relative;
+  color: var(--color-green);
+  font-weight: 500;
+  font-size: 0.7rem;
+  transform: rotate(90deg);
+}
+
+.follow-us::after {
+  content: "";
+  position: absolute;
+  width: 0.8rem;
+  height: 2px;
+  background-color: var(--color-green);
+  right: -40%;
+  top: 45%;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.social-links a {
+  font-size: 1.1rem;
+  color: var(--color-green);
+  transition: 0.15s ease-out;
+}
+.social-links a:hover {
+  font-size: 1.4rem;
+  transform: translateY(-0.3rem);
+}
+
+@media screen and (max-width: 565px) {
+  .home-container {
+    flex-direction: column;
+    gap: 3.5em;
+  }
+
+  .home-title-wraper {
+    width: 100%;
+  }
+
+  .home-title {
+    font-size: 1.7rem;
+  }
+}

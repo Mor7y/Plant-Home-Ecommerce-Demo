@@ -1,0 +1,133 @@
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-data {
+  display: grid;
+  gap: 2rem;
+}
+
+.contact-title {
+  
+margin-bottom: 1rem;
+font-size: clamp(1.1rem, 4vw, 1.5rem);
+letter-spacing: -0.04rem;
+}
+
+.contact-subtitle {
+  font-size: 0.93rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.contact-description {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.contact-description i {
+  font-size: 1.25rem;
+}
+
+
+.contact-form{
+  margin-top: 1rem;
+  width: 50%;
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-content {
+  position: relative;
+  height: 3rem;
+  border-bottom: 1px solid var(--text-color-light);
+}
+
+.contact-input {
+  color: var(--text-color);
+  background: none;
+  outline: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1rem 1rem 0.3rem;
+  border: none;
+}
+
+.contact-label {
+  position: absolute;
+  top: -10px;
+  font-size: 0.8rem;
+  color: var(--text-color-light);
+  transition: 0.3s;
+  padding-bottom: 10px;
+}
+
+.message-wraper {
+  height: 7rem;
+}
+
+.message-wraper textarea {
+  resize: none;
+}
+
+.contact-input:focus + .contact-label {
+  top: -20px;
+
+  color: var(--text-color);
+}
+
+.contact-input:not(:placeholder-shown).contact-input:not(:focus)
+  + .contact-label {
+  top: -20px;
+  color: var(--text-color);
+  z-index: 10;
+}
+
+.form-btn {
+  background-color: var(--color-green);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-btn i {
+  transition: 0.1s;
+  transform: rotate(-45deg);
+}
+
+.form-btn:hover i {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+.form-btn:hover {
+  background-color: var(--color-green-darker);
+}
+
+
+@media  screen and (max-width: 800px){
+
+  .contact-form{
+    width: 100%;
+  }
+
+  .contact-container{
+    flex-direction: column;
+    gap: 3.5rem
+  }
+  
+}

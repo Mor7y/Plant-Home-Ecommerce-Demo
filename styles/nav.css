@@ -1,0 +1,137 @@
+.header {
+  background-color: var(--background-color);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 3.5rem;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.nav-logo {
+  color: var(--color-green);
+  font-weight: 700;
+  display: inline-flex;
+  letter-spacing: -0.03rem;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-menu {
+  margin-left: auto;
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+  color: var(--color-green);
+}
+
+.nav-btns {
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+  gap: 1rem;
+  color: var(--color-green);
+}
+
+.nav-menu-bars {
+  display: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.nav-theme,
+.nav-shopcart {
+  position: relative;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  position: relative;
+  color: var(--title-color);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--color-green);
+}
+
+.active-link {
+  position: relative;
+  color: var(--color-green);
+}
+
+.active-link::after {
+  background-color: var(--color-green);
+  content: " ";
+  height: 1.5px;
+  width: 50%;
+  position: absolute;
+  left: 1px;
+  bottom: -2px;
+}
+
+.nav-close {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+}
+
+.scroll-header {
+  box-shadow: 0 1px 4px var(--border-shadow);
+}
+
+@media screen and (max-width: 820px) {
+  .nav-menu {
+    position: fixed;
+    z-index: 10;
+    background-color: var(--background-color);
+    width: 55%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    box-shadow: -3px 0 4px var(--border-shadow);
+    padding: 4rem 0 0 3rem;
+    border-radius: 10px 0 0 10px;
+    transition: 0.3s;
+  }
+
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .nav-menu-bars,
+  .nav-close {
+    display: block;
+  }
+
+  .nav-btns {
+    margin-left: auto;
+  }
+
+  .show-menu {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav-menu {
+    width: 70%;
+  }
+}
