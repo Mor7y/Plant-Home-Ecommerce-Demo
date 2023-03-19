@@ -1,0 +1,148 @@
+.about {
+  padding: 4.5rem 0 2rem;
+  margin-top: 3.5rem;
+  background-color: var(--color-green-light);
+}
+
+.about-container {
+  margin: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-wraper {
+  width: 50%;
+}
+
+.about-img {
+  width: 300px;
+  box-shadow: 30px -30px 0 rgb(29, 101, 67);
+}
+
+.about-title {
+  margin-bottom: 1rem;
+}
+
+.about-description {
+  margin-bottom: 2rem;
+}
+
+.about-details {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.about-details p {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.83rem;
+}
+
+.about-details i {
+  font-weight: 600;
+  color: var(--color-green-darker);
+}
+
+.shop-now {
+  color: var(--color-green-darker);
+  font-weight: 600;
+}
+
+.steps-container {
+  background-color: var(--color-green-darker);
+  padding: 3rem 2rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.steps-wraper {
+  display: grid;
+  grid-template: auto/ repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.steps-title {
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  justify-self: center;
+  letter-spacing: -0.04rem;
+}
+
+.steps-card {
+  height: 250px;
+  background-color: var(--background-color);
+  padding: 2.5rem 3rem 2rem 1.5rem;
+  border-radius: 1rem;
+}
+
+.steps-card-number {
+  display: inline-block;
+  background-color: var(--color-green-darker);
+  color: white;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.25rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  transition: 0.3s;
+}
+
+.steps-card-title {
+  color: var(--text-color);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.steps-card-description {
+  color: var(--text-color);
+  font-size: 0.84rem;
+  letter-spacing: -0.04rem;
+}
+
+.steps-card:hover .steps-card-number {
+  transform: translateY(-0.3rem);
+}
+
+@media screen and (max-width: 750px) {
+  .about-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-img {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .about-wraper {
+    width: 80%;
+  }
+
+  .steps-wraper {
+    grid-template: auto/ repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .steps-container {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .steps-card {
+    padding: 2rem 2.5rem 1rem 1.5rem;
+  }
+
+  .steps-card-description {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .steps-wraper {
+    grid-template: auto/ repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .steps-card-description {
+    font-size: 0.65rem;
+  }
+}
