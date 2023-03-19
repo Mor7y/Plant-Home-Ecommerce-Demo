@@ -230,11 +230,13 @@ themeIcon.addEventListener("click", function (e) {
   if (icon.classList.contains("fa-moon")) {
     icon.classList.replace("fa-moon", "fa-sun");
     document.body.classList.add("dark-mode");
+    localStorage.removeItem("dark-mode");
     updatedStorage("dark-mode", "on");
   } else {
     icon.classList.replace("fa-sun", "fa-moon");
     document.body.classList.remove("dark-mode");
     localStorage.removeItem("dark-mode");
+    updatedStorage("dark-mode", "off");
   }
 });
 
@@ -406,12 +408,14 @@ function loadStorage(Key) {
     if (Key === "items") {
       cartProducts.appendChild(items.addToCart());
     }
-
-    if (localStorage.key("dark-mode") === "dark-mode") {
-      document.body.classList.add("dark-mode");
-      themeIcon.classList.replace("fa-moon", "fa-sun");
-    }
   });
+
+  const darkModeToggle = JSON.parse(localStorage.getItem("dark-mode")) || [];
+
+  if (darkModeToggle[0] === "on") {
+    document.body.classList.add("dark-mode");
+    themeIcon.classList.replace("fa-moon", "fa-sun");
+  }
 }
 
 // Activate apended DOM elements
@@ -502,6 +506,7 @@ function applyObserverStyle(elementClass, orientation, distance, delay) {
 
   return element;
 }
+
 observer.observe(
   applyObserverStyle(".home-container", "vertical", "-20px", 0.6)
 );
