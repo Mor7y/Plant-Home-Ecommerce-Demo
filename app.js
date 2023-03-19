@@ -230,11 +230,13 @@ themeIcon.addEventListener("click", function (e) {
   if (icon.classList.contains("fa-moon")) {
     icon.classList.replace("fa-moon", "fa-sun");
     document.body.classList.add("dark-mode");
+    localStorage.removeItem("dark-mode");
     updatedStorage("dark-mode", "on");
   } else {
     icon.classList.replace("fa-sun", "fa-moon");
     document.body.classList.remove("dark-mode");
     localStorage.removeItem("dark-mode");
+    updatedStorage("dark-mode", "off");
   }
 });
 
@@ -365,11 +367,11 @@ function showEmptyCart() {
 // Notification Function
 
 function showNotification(text) {
-  notification.classList.add("transition");
+  notification.classList.add("no-transition");
   notification.classList.remove("show");
   setTimeout(() => {
     notification.classList.add("show");
-    notification.classList.remove("transition");
+    notification.classList.remove("no-transition");
   }, 100);
   notification.children[0].innerHTML = text;
 
@@ -406,12 +408,14 @@ function loadStorage(Key) {
     if (Key === "items") {
       cartProducts.appendChild(items.addToCart());
     }
-
-    if (localStorage.key("dark-mode") === "dark-mode") {
-      document.body.classList.add("dark-mode");
-      themeIcon.classList.replace("fa-moon", "fa-sun");
-    }
   });
+
+  const darkModeToggle = JSON.parse(localStorage.getItem("dark-mode")) || [];
+
+  if (darkModeToggle[0] === "on") {
+    document.body.classList.add("dark-mode");
+    themeIcon.classList.replace("fa-moon", "fa-sun");
+  }
 }
 
 // Activate apended DOM elements
@@ -477,9 +481,11 @@ function scrollReveal(entries) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       setTimeout(() => {
+        entry.target.classList.remove("no-transition");
         entry.target.classList.add("show-intersection");
       }, 100);
     } else {
+      entry.target.classList.add("no-transition");
       entry.target.classList.remove("show-intersection");
     }
   });
@@ -488,18 +494,19 @@ function scrollReveal(entries) {
 function applyObserverStyle(elementClass, orientation, distance, delay) {
   const element = document.querySelector(`${elementClass}`);
   element.style.opacity = "0";
-  element.style.transition = 'none'
+  element.style.transition = "none";
   if (orientation === "horizontal") {
     element.style.transform = `translateX(${distance}`;
-    element.style.transition = `all ${delay}s ease-out`;
-    return element;
   } else if (orientation === "vertical") {
     element.style.transform = `translateY(${distance}`;
-    element.style.transition = `all ${delay}s ease-out`;
-
-    return element;
   }
+  setTimeout(() => {
+    element.style.transition = `all ${delay}s ease-out`;
+  }, 100);
+
+  return element;
 }
+
 observer.observe(
   applyObserverStyle(".home-container", "vertical", "-20px", 0.6)
 );
