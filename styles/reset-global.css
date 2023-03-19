@@ -109,7 +109,7 @@ h2 {
 /* notification */
 
 .notification-container {
-  background-color:  rgba(66, 185, 129, 0.7);
+  background-color: rgba(66, 185, 129, 0.7);
   color: white;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
@@ -126,7 +126,7 @@ h2 {
   transform: translate(-50%, -50%);
   height: 100px;
   width: 40%;
-  transition: all 1.5s ease;
+  transition: all 1s ease;
   opacity: 0;
 }
 
@@ -135,23 +135,27 @@ h2 {
   bottom: 0;
 }
 
-.notification-container:hover {
-  background-color:  rgba(66, 185, 129, 1);
+.no-transition {
+  transition: none !important;
 }
 
-.notification-close{
+.notification-container:hover {
+  background-color: rgba(66, 185, 129, 1);
+}
+
+.notification-close {
   font-size: 2rem;
   color: rgb(255, 106, 106);
   cursor: pointer;
 }
 
-.notification-message span{
+.notification-message span {
   font-weight: 600;
   font-size: 1.3rem;
 }
 
-@media screen and (max-width: 600px ){
-  .notification-container{
+@media screen and (max-width: 600px) {
+  .notification-container {
     width: 80%;
   }
 }
@@ -171,7 +175,6 @@ body.dark-mode {
 /* Scroll Reveal */
 
 .show-intersection {
-  opacity: 1  !important;
+  opacity: 1 !important;
   transform: translate(0, 0) !important;
 }
-
