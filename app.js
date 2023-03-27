@@ -73,7 +73,7 @@ class Product {
           <p class="cart-price">€${this.price}</p>
         </div>
         <i class="fa-solid fa-x"></i>
-        <input type="number" value="1" min="1" class="cart-count" />
+        <input type="number" value="1" min="1" max="20" class="cart-count" />
         <p class="cart-total">€${this.price}</p>
         <i class="fa-solid fa-trash remove-item"></i>`;
 
