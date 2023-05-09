@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-green: rgb(29, 101, 67);
+  --color-green-darker: rgb(18, 64, 44);
+  --color-green-light: rgba(142, 239, 173, 0.5);
+  --title-color: rgb(37, 42, 39);
+  --text-color: #5d615f;
+  --text-color-light: rgb(213, 213, 213);
+  --background-color: white;
+  --border-shadow: rgba(0, 0, 0, 0.2);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.93rem;
+}
+
+body {
+  background-color: var(--background-color);
+  height: 100vh;
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+section,
+footer {
+  padding: 4.5rem 0 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: clip;
+}
+
+h1,
+h2 {
+  line-height: 1.5;
+  letter-spacing: -0.03rem;
+  margin-bottom: 1.5rem;
+}
+
+.nav-conainer,
+.home-container,
+.about-container,
+.steps-container,
+.product-container,
+.contact-container,
+.footer-container {
+  margin: 0 1.5rem;
+}
+
+.scroll-up {
+  display: none;
+  background-color: rgba(11, 72, 38, 0.734);
+  padding: 0.8rem;
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  border-radius: 1rem;
+  color: var(--text-color-light);
+}
+
+.scroll-up:hover {
+  background-color: var(--color-green);
+  color: white;
+}
+
+.show-scrollup {
+  display: inline-flex;
+}
+
+/* notification */
+
+.notification-container {
+  background-color: rgba(66, 185, 129, 0.7);
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  letter-spacing: -0.03rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+  z-index: 20;
+  bottom: -20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: 40%;
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+.notification-container.show {
+  opacity: 0.9;
+  bottom: 0;
+}
+
+.no-transition {
+  transition: none !important;
+}
+
+.notification-container:hover {
+  background-color: rgba(66, 185, 129, 1);
+}
+
+.notification-close {
+  font-size: 2rem;
+  color: rgb(255, 106, 106);
+  cursor: pointer;
+}
+
+.notification-message span {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .notification-container {
+    width: 80%;
+  }
+}
+
+body.dark-mode {
+  --color-green: rgb(66, 185, 129);
+  --color-green-darker: rgb(37, 82, 61);
+  /* --color-green-darker: rgba(68, 200, 139); */
+  --color-green-light: rgba(179, 255, 220, 0.5);
+  --title-color: white;
+  --text-color: white;
+  --text-color-light: white;
+  --background-color: rgb(24, 21, 37);
+  --border-shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* Scroll Reveal */
+
+.show-intersection {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}

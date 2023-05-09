@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./images/plant-icon.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/reset-global.css" />
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/about.css" />
+    <link rel="stylesheet" href="./styles/products.css" />
+    <link rel="stylesheet" href="./styles/shopcart.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <script
+      src="https://kit.fontawesome.com/e7df91fc23.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Plant Home</title>
+  </head>
+  <body>
+    <div class="notification-container">
+      <p class="notification-message"></p>
+      <i class="fa-solid fa-xmark notification-close"></i>
+    </div>
+    <header id="header" class="header">
+      <nav class="nav-container">
+        <a href="#" class="nav-logo">
+          <i class="fa-solid fa-leaf nav-icon"></i> PLANT HOME
+        </a>
+        <div class="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#home" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#products" class="nav-link">Products</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+          <div class="nav-close">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <div class="nav-btns">
+          <div class="nav-theme">
+            <i class="fa-regular fa-moon theme"></i>
+          </div>
+          <div class="nav-shopcart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div class="shop-count"></div>
+          </div>
+          <div class="nav-menu-bars">
+            <i class="fa-solid fa-bars-staggered"></i>
+          </div>
+        </div>
+        <div class="shop-cart">
+          <div class="cart-container">
+            <div class="cart-header">
+              <h3>Your Cart</h3>
+              <button>Close<i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <h1 class="cart-empty">Your cart is Empty</h1>
+            <div class="cart-products"></div>
+            <div class="cart-checkout">
+              <h3 class="shop-total">Total <span>$0.00</span></h3>
+              <button class="check-out">Place Order</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section id="home" class="home">
+        <div class="home-container">
+          <div class="home-img-wraper">
+            <img src="images/plant-background.png" alt="" class="home-img" />
+            <div class="img-background"></div>
+          </div>
+          <div class="home-title-wraper">
+            <h1 class="home-title">
+              Welcome to our <br />
+              <span>Plant Home!</span>
+            </h1>
+            <p class="home-description">
+              Experience the natural serenity of our welcoming botanical
+              sanctuary, where every corner is bursting with life and color.
+            </p>
+            <a href="#products" class="home-btn"
+              >Explore <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="home-social">
+            <p class="follow-us">Follow Us</p>
+            <div class="social-links">
+              <a href="https://facebook.com" target="_blank" class="social-link"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" class="social-link">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="about-container">
+          <img src="images/plant-shop.jpg" alt="" class="about-img" />
+          <div class="about-wraper">
+            <div class="about-intro">
+              <h2 class="about-title">Who we are</h2>
+              <p class="about-description">
+                We're a team of plant enthusiasts committed to expert guidance,
+                exceptional service, and helping you grow and care for your
+                plants.
+              </p>
+            </div>
+            <div class="about-details">
+              <p class="about-details-description">
+                <i class="fa-solid fa-square-check"></i>
+                We guide your plant care beyond the sale.
+              </p>
+              <p class="about-details-description">
+                <i class="fa-solid fa-square-check"></i>
+                We share our passion and expertise with you.
+              </p>
+              <p class="about-details-description">
+                <i class="fa-solid fa-square-check"></i>
+                We prioritize your plant's health with follow-up check-ups.
+              </p>
+              <p class="about-details-description">
+                <i class="fa-solid fa-square-check"></i>
+                We offer a money-back guarantee for peace of mind.
+              </p>
+            </div>
+            <a href="#products" class="shop-now"
+              >Shop Now <i class="fa-solid fa-chevron-down"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+      <section class="steps">
+        <div class="steps-container hidden">
+          <h2 class="steps-title">
+            Setps To Start Your <br />
+            Plant Journey
+          </h2>
+
+          <div class="steps-wraper">
+            <div class="steps-card">
+              <div class="steps-card-number">01</div>
+              <h3 class="steps-card-title">Choose Plant</h3>
+              <p class="steps-card-description">
+                Choose from our wide selection of healthy plants to find the
+                perfect fit for your home.
+              </p>
+            </div>
+            <div class="steps-card">
+              <div class="steps-card-number">02</div>
+              <h3 class="steps-card-title">Place an order</h3>
+              <p class="steps-card-description">
+                Place Your Order Easily place your order online and we'll take
+                care of the rest.
+              </p>
+            </div>
+            <div class="steps-card">
+              <div class="steps-card-number">03</div>
+              <h3 class="steps-card-title">Get plants delivered</h3>
+              <p class="steps-card-description">
+                Your plants will be delivered quickly and with care, so they
+                arrive at your doorstep in perfect condition.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="products">
+        <div class="product-container">
+          <h2 class="products-title">Discover Our Product Selection</h2>
+          <p class="product-description">
+            Experience the beauty and tranquility of nature in your home with
+            our hand-selected collection of plants and accessories, tailored to
+            fit your unique lifestyle and design aesthetic.
+          </p>
+          <div class="prodcut-wraper">
+            <article class="product-card" data-id="1">
+              <div class="product-circle"></div>
+              <img src="images/plant-1.png" alt="" />
+
+              <h3 class="product-title">Cactus Plant</h3>
+              <p class="product-price"><span>€</span>8.99</p>
+              <button class="product-btn">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </button>
+            </article>
+
+            <article class="product-card" data-id="2">
+              <div class="product-circle"></div>
+              <img src="images/plant-2.png" alt="" />
+
+              <h3 class="product-title">Succulent Plant</h3>
+              <p class="product-price"><span>€</span>7.99</p>
+              <button class="product-btn">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </button>
+            </article>
+
+            <article class="product-card" data-id="3">
+              <div class="product-circle"></div>
+              <img src="images/plant-3.png" alt="" />
+
+              <h3 class="product-title">Succulent Plant</h3>
+              <p class="product-price"><span>€</span>6.99</p>
+              <button class="product-btn">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </button>
+            </article>
+
+            <article class="product-card" data-id="4">
+              <div class="product-circle"></div>
+              <img src="images/plant-4.png" alt="" />
+
+              <h3 class="product-title">Aloe Plant</h3>
+              <p class="product-price"><span class="dolar">€</span>11.99</p>
+              <button class="product-btn">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </button>
+            </article>
+
+            <article class="product-card" data-id="5">
+              <div class="product-circle"></div>
+              <img src="images/plant-5.png" alt="" />
+
+              <h3 class="product-title">Green Plant</h3>
+              <p class="product-price"><span>€</span>8.50</p>
+              <button class="product-btn">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </button>
+            </article>
+            <article class="product-card" data-id="6">
+              <div class="product-circle"></div>
+              <img src="images/plant-6.png" alt="" />
+              <h3 class="product-title">Cactus Plant</h3>
+              <p class="product-price"><span>€</span>7.50</p>
+              <button class="product-btn">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </button>
+            </article>
+            <button class="add-product">
+              <i class="fa-solid fa-plus"></i>
+              Add Product
+            </button>
+          </div>
+
+          <div class="product-overlay">
+            <form class="product-form">
+              <label for="imgPath"
+                >Img Src<span
+                  >EX: " images/plant-1.png " <br />
+                  available options: plant-" 1-7 " or any " https:// " src</span
+                ></label
+              >
+              <input
+                class="new-prod-img"
+                name="imgPath"
+                type="text"
+                value="images/plant-7.png"
+              />
+              <label for="name"
+                >Product Name<span>EX: " Cactus Plant "</span></label
+              >
+              <input class="new-prod-name" type="text" value="" />
+              <label for="price">Price<span>EX: " 12.99 "</span></label>
+              <input
+                class="new-prod-price"
+                type="number"
+                min="1"
+                max="100"
+                step="0.01"
+                value=""
+              />
+              <button>Add Product<i class="fa-solid fa-plus"></i></button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="contact-container">
+          <div class="contact-box">
+            <div class="contact-data">
+              <h2 class="contact-title">
+                Reach us on the details below <br />
+                or send us a message
+              </h2>
+              <div class="contatc-info">
+                <h3 class="contact-subtitle">Call us on:</h3>
+                <p class="contact-description">
+                  <i class="fa-solid fa-phone"></i>
+                  +04 1234-567-890
+                </p>
+              </div>
+              <div class="contatc-info">
+                <h3 class="contact-subtitle">Email us on:</h3>
+                <a
+                  class="contact-description"
+                  href="mailto:planthome@gmail.com"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                  planthome@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
+          <form action="" class="contact-form">
+            <div class="inputs-container">
+              <div class="contact-content">
+                <input
+                  name="email"
+                  type="email"
+                  class="contact-input"
+                  placeholder=" "
+                />
+                <label for="email" class="contact-label">Email</label>
+              </div>
+              <div class="contact-content">
+                <input
+                  name="subject"
+                  type="text"
+                  class="contact-input"
+                  placeholder=" "
+                />
+                <label for="subject" class="contact-label">Subject</label>
+              </div>
+              <div class="contact-content message-wraper">
+                <textarea
+                  class="contact-input"
+                  name="message"
+                  placeholder=" "
+                  cols="30"
+                  rows="10"
+                ></textarea>
+                <label for="" class="contact-label">Message</label>
+              </div>
+            </div>
+
+            <button class="form-btn">
+              Send Message<i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <div class="overlay"></div>
+    <a href="#home" class="scroll-up">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content left">
+          <a href="" class="footer-logo"
+            ><i class="fa-solid fa-leaf footer-icon"></i> PLANT HOME
+          </a>
+
+          <h3 class="footer-title">Subscripe to our Newsletter</h3>
+          <form class="footer-subscribe">
+            <input type="email" required placeholder="Enter your email" />
+            <button class="footer-btn">Subscribe</button>
+          </form>
+        </div>
+        <div class="footer-content right">
+          <h3 class="footer-title">Our Contact Details:</h3>
+          <ul class="footer-data">
+            <li class="footer-info">
+              <i class="fa-solid fa-location-dot"></i>Iasi, Romania
+            </li>
+            <li class="footer-info">
+              <i class="fa-solid fa-house"></i>Plant Street No. 10
+            </li>
+            <li class="footer-info">
+              <i class="fa-solid fa-phone"></i>+04 1234-567-890
+            </li>
+            <li class="footer-info">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                class="footer-socials"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                class="footer-socials"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                class="footer-socials"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="copy-right">© 2023 Tolea AG. All rights reseved</p>
+    </footer>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
